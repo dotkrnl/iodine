@@ -47,11 +47,6 @@
     overflow: hidden;
 }
 
-.page-title {
-    text-align: center;
-    margin: 10px 0 30px !important;
-}
-
 div.err-notice {
     width: 100%;
     max-width: 300px;
@@ -98,18 +93,25 @@ body > .container {
     margin-top: 22px;
 }
 
-.welcome {
+.welcome, .header {
     background-image: url(brand.jpg);
     background-color: gray;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%;
     color: white;
-    text-shadow: black 1px 1px 3px;
-    padding: 5em 0 3em 0;
+    text-shadow: black 1px 0 5px;
 }
 
-.welcome h2 {
+.welcome {
+    padding: 5em 0 3em 0;
+}
+.header {
+    padding: 2em 0 2em 0;
+}
+
+.welcome h2,
+.header h2 {
     margin-top: 0;
 }
 

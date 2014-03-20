@@ -14,4 +14,11 @@
         <p><?php echo(__("index.any_problem")); ?></p>
     </div>
 </div>
+<?php else: ?>
+<div class="header" style="background-image: url(<?php echo e::url('/img/brand.jpg'); ?>);">
+    <div class="container">
+        <?php if ($title): ?><h1 class="page-title"><?php echo($title); ?></h1><?php endif; ?>
+        <?php if ($subtitle): ?><div><?php echo($subtitle); ?></div><?php endif; ?>
+    </div>
+</div>
 <?php endif; ?>

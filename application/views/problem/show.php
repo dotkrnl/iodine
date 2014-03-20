@@ -2,23 +2,6 @@
 if (isset($cid)) {
     echo(View::factory('contest/header', array('title' => $title, 'contest' => $contest, 'cid'=>$cid)));
 } ?>
-<h1 class="page-title"><?php if (isset($cid)) {
-    echo(e::contest_pid($pid));
-} else {
-    echo($problem['problem_id']);
-} ?>
-    - <?php echo($problem['title']); ?></h1>
-<div class="contest-info">
-    <p>
-        <?php echo(__('problem.show.time_limit')); ?><span class="label label-warning"><?php echo($problem['time_limit']);?><?php echo(__('problem.show.second')); ?></span>
-        <?php echo(__('problem.show.memory_limit')); ?><span class="label label-danger"><?php echo($problem['memory_limit']);?><?php echo(__('problem.show.MB')); ?></span><br/>
-    </p>
-    <div>
-        <?php if ($problem->is_special_judge()):?><span class="label label-danger"><?php echo(__('problem.show.spj'));?></span><?php endif;?>
-        <?php echo(__('problem.show.submissions_:count', array(':count' => $problem['submit'])));?>
-        <?php echo(__('problem.show.solved_:count', array(':count' => $problem['accepted'])));?>
-    </div>
-</div>
 <dl class="detail">
     <dt><?php echo(__('problem.show.description')); ?></dt>
     <dd id="problem-desc"><?php echo($problem['description']);?></dd>

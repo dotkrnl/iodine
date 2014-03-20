@@ -31,7 +31,10 @@
         </div><!--/.nav-collapse -->
     </div>
 </div>
-<?php echo View::factory('block/header'); ?>
+<?php echo View::factory('block/header', array(
+    'title' => isset($title) ? $title : '',
+    'subtitle' => isset($subtitle) ? $subtitle : '',
+)); ?>
 <div class="container">
 <?php if (OJ::is_backend()):?>
     <div class="row">

@@ -52,6 +52,13 @@ class Controller_Problem extends Controller_Base
         {
             //TODO: is defunct problem can access?
             $this->template_data['title'] = $problem['title'];
+            $this->template_data['subtitle'] =
+                __('problem.show.time_limit') . $problem['time_limit'] . __('problem.show.second') . '　'.
+                __('problem.show.memory_limit') . $problem['memory_limit'] . __('problem.show.MB') . '　'.
+                __('problem.show.submissions_:count', array(':count' => $problem['submit'])) . '　' .
+                __('problem.show.solved_:count', array(':count' => $problem['accepted'])) . '　'.
+                ($problem->is_special_judge() ? __('problem.show.spj') : '');
+
             $this->template_data['problem'] = $problem;
         } else {
             throw new Exception_Base(__('common.problem_not_found'));
