@@ -6,7 +6,6 @@
 }
 
 .problem-pagination {
-    width: 100%;
     max-width: 600px; /* will ok in pagination less than 15, if larger than 15, make li a padding less, or other ui*/
     float: left;
 }
@@ -79,14 +78,51 @@ div.contest-info p {
 }
 
 .detail dd, .readability {
-    margin: 1em 20px 1em;
     font-size: 1.465em;
     font-family: "minion-pro-1", "minion-pro-2", "Palatino", Georgia, "Times New Roman", serif;
     line-height: 1.7em;
 }
 
+.detail dd {
+    margin: 1em 20px 1em;
+}
+
 .readability {
     font-size: 1.3em;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+body > .container {
+    margin-top: 22px;
+}
+
+.welcome {
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    color: white;
+    text-shadow: black 1px 1px 3px;
+    padding: 5em 0 3em 0;
+}
+
+.welcome h2 {
+    margin-top: 0;
+}
+
+@media(max-width:768px) {
+    .welcome {
+        background-size: 768px;
+    }
+}
+
+.fake-hide {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
 }
 
 ul.summary {

@@ -31,6 +31,7 @@
         </div><!--/.nav-collapse -->
     </div>
 </div>
+<?php echo View::factory('block/header'); ?>
 <div class="container">
 <?php if (OJ::is_backend()):?>
     <div class="row">
