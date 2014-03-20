@@ -34,6 +34,7 @@
 <?php echo View::factory('block/header', array(
     'title' => isset($title) ? $title : '',
     'subtitle' => isset($subtitle) ? $subtitle : '',
+    'pullright' => isset($pullright) ? $pullright : '',
 )); ?>
 <div class="container">
 <?php if (OJ::is_backend()):?>
@@ -42,7 +43,6 @@
             <?php echo View::factory('admin/'. strtolower(Request::current()->controller()).'/sidebar');?>
         </div>
         <div class="col-md-11">
-            <h3><?php echo $title;?></h3>
             <?php echo View::factory('common/message');?>
             <?php echo($body); ?>
         </div>

@@ -3,7 +3,6 @@
         <?php echo View::factory('mail/sidebar');?>
     </div>
     <div class="col-md-10">
-        <h3><?php echo $title;?></h3>
         <form role="form" class="form-horizontal" method="post" action="<?php e::url('/mail/send');?>">
             <div class="form-group">
                 <label class="control-label col-sm-1" for="receiver"><?php echo(__('mail.new.receiver')); ?></label>

@@ -1,4 +1,4 @@
-<?php if (Request::$current->controller() == 'Index'):?>
+<?php if (Request::$current->controller() == 'Index' AND Request::$current->action() == 'index'):?>
 <div class="welcome readability">
     <div class="container">
         <?php if ((!$current_user) AND (! OJ::is_captcha_enabled())): ?>
@@ -15,8 +15,13 @@
     </div>
 </div>
 <?php else: ?>
-<div class="header" style="background-image: url(<?php echo e::url('/img/brand.jpg'); ?>);">
+<div class="header">
     <div class="container">
+        <?php if ($pullright): ?>
+        <div class="pull-right hidden-xs hidden-sm">
+            <?php echo View::factory($pullright); ?>
+        </div>
+        <?php endif; ?>
         <?php if ($title): ?><h1 class="page-title"><?php echo($title); ?></h1><?php endif; ?>
         <?php if ($subtitle): ?><div><?php echo($subtitle); ?></div><?php endif; ?>
     </div>

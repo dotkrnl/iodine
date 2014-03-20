@@ -159,7 +159,7 @@ return array(
     'user.edit.edit_done' => '成功修改信息',
     'user.edit.password_not_required' => '若不修改密码，请放空',
 
-    'user.profile.about_:name' => '关于:name',
+    'user.profile.about_:name' => ':name',
     'user.profile.register_:time' => '注册时间 :time',
     'user.profile.last_access_:time' => '最后登录 :time',
     'user.profile.accept' => '通过',

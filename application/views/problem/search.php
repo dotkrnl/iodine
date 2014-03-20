@@ -1,7 +1,3 @@
-<h1><?php echo(__('problem.search.search_:text_in_:area', array(':text' => $search_text, ':area' => __($area))));?></h1>
-
-<?php echo(View::factory('problem/searchform'));?>
-
 <table class="table table-hover">
 <thead>
     <tr>

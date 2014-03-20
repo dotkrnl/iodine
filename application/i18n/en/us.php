@@ -159,7 +159,7 @@ return array(
     'user.edit.edit_done' => 'Successful',
     'user.edit.password_not_required' => 'not required if not changing',
 
-    'user.profile.about_:name' => 'About :name',
+    'user.profile.about_:name' => ':name',
     'user.profile.register_:time' => 'Register: :time',
     'user.profile.last_access_:time' => 'Last Access: :time',
     'user.profile.accept' => 'accept',

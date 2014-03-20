@@ -1,5 +1,3 @@
-<h1>FAQ</h1>
-<hr>
 <dl class="faqs">
     <dt class="q"><span>Q:</span>What is the compiler the judge is using and what are the compiler options?</dt>
     <dd>

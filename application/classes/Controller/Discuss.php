@@ -93,6 +93,7 @@ class Controller_Discuss extends Controller_Base
         $this->template_data['topic_list'] = $topic_list;
         $this->template_data['total'] = ceil( $total / OJ::per_page);
         $this->template_data['title'] = __('discuss.list.discuss');
+        $this->template_data['pullright'] = 'discuss/filterform';
     }
 
     public function action_batch()

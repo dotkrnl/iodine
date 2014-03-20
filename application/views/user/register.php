@@ -1,4 +1,3 @@
-<h2 class="page-title"><?php echo(__('user.register.user_register')); ?></h2>
 <form role="form" class="form-horizontal col-sm-7 col-sm-offset-2" action="<?php e::url('/user/register');?>" method="POST">
     <div class="form-group">
         <label for="username" class="col-sm-4 control-label"><?php echo(__('user.register.username')); ?></label>

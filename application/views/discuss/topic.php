@@ -10,7 +10,6 @@
     <li class="active"><?php echo($the_topic->title);?></li>
 </ul>
 <div class="topic">
-<h2><?php echo($the_topic->title);?></h2>
 <?php if ( OJ::is_admin() ):?>
 <div class="admin-op">
     <a class="btn btn-danger make-sure" href="<?php e::url("/discuss/removetopic/{$the_topic->tid}");?>" data-no-turbolink><?php echo(__('discuss.list.delete')); ?></a>

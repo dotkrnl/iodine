@@ -52,6 +52,7 @@ class Controller_Contest extends Controller_Base
         $this->template_data['topic_list'] = $topic_list;
         $this->template_data['total'] = ceil( $total / OJ::per_page);
         $this->template_data['title'] = sprintf('%s', $contest->title);
+        $this->template_data['subtitle'] = e::contest_info($contest);
     }
 
     public function action_show()
@@ -65,6 +66,7 @@ class Controller_Contest extends Controller_Base
         $this->template_data['cid'] = $cid;
         $this->template_data['contest'] = $contest;
         $this->template_data['title'] = $contest['title'];
+        $this->template_data['subtitle'] = e::contest_info($contest);
     }
 
     public function action_standing()
@@ -77,6 +79,7 @@ class Controller_Contest extends Controller_Base
         $this->template_data['cid']     = $cid;
         $this->template_data['contest'] = $contest;
         $this->template_data['title']   = "{$contest['title']}";
+        $this->template_data['subtitle'] = e::contest_info($contest);
     }
 
     public function action_statistics()
@@ -92,6 +95,7 @@ class Controller_Contest extends Controller_Base
         $this->template_data['result'] = $ret['result'];
         $this->template_data['language'] = $ret['language'];
         $this->template_data['title'] = "{$contest['title']}";
+        $this->template_data['subtitle'] = e::contest_info($contest);
         $this->template_data['cid'] = $cid;
     }
 
@@ -118,6 +122,7 @@ class Controller_Contest extends Controller_Base
             }
         $this->template_data['contest'] = $contest;
         $this->template_data['title']   = "{$contest['title']}";
+        $this->template_data['subtitle'] = e::contest_info($contest);
         $this->template_data['cid']     = $cid;
         $this->template_data['problem'] = $problem;
         $this->template_data['pid']     = $pid;

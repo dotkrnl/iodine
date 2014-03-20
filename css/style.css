@@ -34,10 +34,6 @@
   }
 }
 
-.status-filter .form-group {
-    margin-right: 10px;
-}
-
 .news {
     margin: 30px 10px;
 }
@@ -89,8 +85,8 @@ div.contest-info p {
 .navbar {
     margin-bottom: 0;
 }
-body > .container {
-    margin-top: 22px;
+.welcome, .header {
+    margin-bottom: 22px;
 }
 
 .welcome, .header {
@@ -99,20 +95,24 @@ body > .container {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%;
-    color: white;
     text-shadow: black 1px 0 5px;
+}
+
+.welcome, .header,
+.welcome h2, .header h1 {
+    color: white;
 }
 
 .welcome {
     padding: 5em 0 3em 0;
 }
 .header {
-    padding: 2em 0 2em 0;
+    padding: 3.5em 0 2.5em 0;
 }
 
 .welcome h2,
-.header h2 {
-    margin-top: 0;
+.header h1 {
+    margin: 0;
 }
 
 @media(max-width:768px) {

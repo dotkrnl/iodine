@@ -60,6 +60,10 @@ class Controller_Solution extends Controller_Base
 
         // view
         $this->template_data['title'] = __('solution.status.status');
+        if ( ! Request::$current->query('cid') )
+        {
+            $this->template_data['pullright'] = 'solution/filterform';
+        }
         $this->template_data['list']  = $status;
         $this->template_data['total'] = ceil($total / $per_page);
 
@@ -74,6 +78,7 @@ class Controller_Solution extends Controller_Base
             $this->template_data['cid']     = $cid;
             $this->template_data['contest'] = $contest;
             $this->template_data['title']   = "{$contest['title']}";
+            $this->template_data['subtitle'] = e::contest_info($contest);
         }
 
     }

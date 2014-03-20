@@ -1,4 +1,3 @@
-<h2 class="page-title"><?php echo(__('user.edit.user_edit')); ?></h2>
 <form action="<?php e::url(Request::current()->uri());?>" method="POST" class="form-horizontal col-sm-7 col-sm-offset-2" role="form">
     <div class="form-group">
         <label class="control-label col-sm-4" for="user_id"><?php echo(__('user.register.username')); ?></label>

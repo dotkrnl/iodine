@@ -2,30 +2,18 @@
 <ul class="breadcrumb">
 <li>
     <a href="<?php e::url('/discuss/');?>"><?php echo(__('discuss.list.discuss')); ?></a>
-    <?php if (Request::current()->query('pid')):?>
-    <span class="divider">/</span> <a href="<?php e::url('/problem/show/'. Request::current()->query('pid'));?>"><?php echo Request::current()->query('pid');?></a>
-    <?php endif;?>
+    <span class="divider"></span> 
 </li>
+<?php if (Request::current()->query('pid')):?>
+<li>
+    <a href="<?php e::url('/problem/show/'. Request::current()->query('pid'));?>"><?php echo Request::current()->query('pid');?></a>
+    <span class="divider"></span> 
+</li>
+<?php endif;?>
 </ul>
-<form class="form-inline well" role="form" action="<?php e::url('/discuss');?>" method="GET">
-    <div class="form-group">
-        <label class="sr-only" for="pid"><?php echo(__('discuss.list.problem_id')); ?></label>
-        <input placeholder="<?php echo(__('discuss.list.problem_id')); ?>" name="pid" id="pid" class="form-control"/>
-    </div>
-    <div class="form-group">
-        <label class="sr-only" for="uid"><?php echo(__('discuss.list.user_id')); ?></label>
-        <input placeholder="<?php echo(__('discuss.list.user_id')); ?>" name="uid" id="uid" class="form-control"/>
-    </div>
-    <input type="submit" value="<?php echo(__('discuss.list.filter')); ?>" class="btn btn-default">
-    <a href="<?php e::url('/discuss/new');?>" class="btn btn-info pull-right"><?php echo(__('discuss.list.new_topic')); ?></a>
-</form>
 <?php else:?>
     <?php echo(View::factory('contest/header', array('title' => $title, 'cid' => Request::$current->query('cid'), 'contest' => $contest)));?>
-<div class="well">
-    <a href="<?php e::url("/discuss/new?cid={$cid}");?>" class="btn btn-info"><?php echo(__('discuss.list.new_topic')); ?></a>
-</div>
 <?php endif;?>
-<hr class="clearfix"/>
 <?php if ( OJ::is_admin() ):?>
 <form action="<?php e::url('discuss/batch');?>" method="post">
 <?php endif;?>
@@ -64,6 +52,11 @@
     <button class="btn btn-danger" name="action" value="andblockuser"><?php echo(__('discuss.list.delete_block')); ?></button>
     </form>
 <?php endif;?>
+<?php if ( isset($cid) ):?>
+    <a href="<?php e::url("/discuss/new?cid={$cid}");?>" class="btn btn-info"><?php echo(__('discuss.list.new_topic')); ?></a>
+<?php else: ?>
+    <a href="<?php e::url("/discuss/new");?>" class="btn btn-info"><?php echo(__('discuss.list.new_topic')); ?></a>
+<?php endif; ?>
 <ul class="pager double-side-pager">
     <?php $page = Request::$current->query('page');?>
     <?php if ($page != 1):?>

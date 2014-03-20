@@ -35,6 +35,7 @@ class Controller_Problem extends Controller_Base
 
         $title = __('problem.list.problem_set_:id', array(':id' => $page));
         $this->template_data['title'] = $title;
+        $this->template_data['pullright'] = 'problem/searchform';
 
         $this->template_data['page'] = $page;
         $this->template_data['pages'] = $total_volumes;
@@ -173,7 +174,8 @@ class Controller_Problem extends Controller_Base
         $this->template_data['search_text'] = $text;
         $this->template_data['problemlist'] = $list;
         $this->template_data['title']
-            = __(':text_search_result', array(':text' => $text));
+            = __('problem.search.:text_search_result', array(':text' => $text));
+        $this->template_data['pullright'] = 'problem/searchform';
     }
 
 } // End Welcome

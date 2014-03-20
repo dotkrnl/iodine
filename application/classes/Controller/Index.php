@@ -47,6 +47,7 @@ class Controller_Index extends Controller_Base
         if ( $news AND $news->is_public() )
         {
             $this->template_data['title'] = $news->title;
+            $this->template_data['subtitle'] = "{$news->user_id} @ {$news->time}";
             $this->template_data['news'] = $news;
         } else {
             throw new Exception_Base(__('common.news_not_found'));

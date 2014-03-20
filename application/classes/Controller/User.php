@@ -37,6 +37,7 @@ class Controller_User extends Controller_Base
 
         $this->template_data['title']
             = __('user.profile.about_:name', array(':name' => $uid));
+        $this->template_data['subtitle'] = $user['nick'];
         $this->template_data['user'] = $user;
     }
 

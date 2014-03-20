@@ -1,9 +1,4 @@
 <div class="user-profile">
-    <div class="span8">
-        <!--<img src="#userimage" alt="user image"/>-->
-        <h2><?php /* @var Model_User $user */
-            echo $user['user_id'], ' - ', $user['nick']; ?></h2>
-    </div>
     <div class="row basic-info">
         <div class="col-sm-7 user-card">
             <ul class="nav nav-pills nav-stacked">
