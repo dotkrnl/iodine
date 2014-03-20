@@ -99,6 +99,7 @@ body > .container {
 }
 
 .welcome {
+    background-image: url(brand.jpg);
     background-color: gray;
     background-repeat: no-repeat;
     background-position: bottom;

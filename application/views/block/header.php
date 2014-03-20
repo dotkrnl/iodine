@@ -1,5 +1,5 @@
 <?php if (Request::$current->controller() == 'Index'):?>
-<div class="welcome readability" style="background-image: url(<?php echo e::url('/img/brand.jpg'); ?>);">
+<div class="welcome readability">
     <div class="container">
         <?php if ((!$current_user) AND (! OJ::is_captcha_enabled())): ?>
         <div class="pull-right hidden-xs hidden-sm col-sm-4">
