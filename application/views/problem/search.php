@@ -3,7 +3,7 @@
     <tr>
         <th class="pid"><?php echo(__('problem.list.id')); ?></th>
         <th class="ptitle"><?php echo(__('problem.list.title')); ?></th>
-        <th class="pratio"><?php echo(__('problem.list.ratio_ac_submit')); ?></th>
+        <th class="pratio hidden-xs"><?php echo(__('problem.list.ratio_ac_submit')); ?></th>
         <th class="colorcol"></th>
     </tr>
 </thead>
@@ -16,7 +16,7 @@
             <span> - <?php echo($problem->source);?></span>
         <?php endif;?>
         </td>
-        <td class="pratio"><?php echo($problem->accepted); ?>/<?php echo($problem->submit); ?></td>
+        <td class="pratio hidden-xs"><?php echo($problem->accepted); ?>/<?php echo($problem->submit); ?></td>
         <td class="colorcol <?php echo e::pass_status($problem);?>"></td>
     </tr>
 <?php endforeach;?>

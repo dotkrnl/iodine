@@ -7,11 +7,11 @@
 		<th class="pid"><?php echo(__('solution.status.problem_id')); ?></th>
 		<th><?php echo(__('solution.status.user_id')); ?></th>
 		<th><?php echo(__('solution.status.result')); ?></th>
-		<th><?php echo(__('solution.status.time')); ?></th>
-		<th><?php echo(__('solution.status.memory')); ?></th>
-		<th><?php echo(__('solution.status.language')); ?></th>
-		<th><?php echo(__('solution.status.code_length')); ?></th>
-		<th><?php echo(__('solution.status.submit_time')); ?></th>
+		<th class="hidden-xs"><?php echo(__('solution.status.time')); ?></th>
+		<th class="hidden-xs"><?php echo(__('solution.status.memory')); ?></th>
+		<th class="hidden-xs"><?php echo(__('solution.status.language')); ?></th>
+		<th class="hidden-xs hidden-sm"><?php echo(__('solution.status.code_length')); ?></th>
+		<th class="hidden-xs"><?php echo(__('solution.status.submit_time')); ?></th>
         <th class="colorcol"></th>
 	</tr>
 	</thead>
@@ -32,11 +32,11 @@
             <?php echo(__(e::jresult($i->result)));?>
             <?php if (OJ::is_oi_mode()) echo $i->display_pass_rate(); ?>
         </td>
-        <td><?php if($i->result == 4) echo $i->time, 'ms'; else echo('----');?></td>
-        <td><?php if($i->result == 4) echo $i->memory, 'KB'; else echo('----');?></td>
-        <td><?php echo e::lang($i->language);?></td>
-        <td><?php echo $i->code_length;?>B</td>
-        <td><?php echo($i->in_date);?></td>
+        <td class="hidden-xs"><?php if($i->result == 4) echo $i->time, 'ms'; else echo('----');?></td>
+        <td class="hidden-xs"><?php if($i->result == 4) echo $i->memory, 'KB'; else echo('----');?></td>
+        <td class="hidden-xs"><?php echo e::lang($i->language);?></td>
+        <td class="hidden-xs hidden-sm"><?php echo $i->code_length;?>B</td>
+        <td class="hidden-xs"><?php echo($i->in_date);?></td>
         <td class="colorcol <?php echo(e::status_color($i->result)); ?>"></td>
     </tr>
 <?php endif; ?>
