@@ -9,7 +9,6 @@
     </ul>
     <div class="runtime-info">{memory_usage}, {execution_time}</div>
     <p id="copyright"><?php echo(__('footer.copyright_:year_:team_reserved', array(':year'=>date('Y'), ':team'=>e::get_website_team()))); ?></p>
-    <p id="copyright"><?php echo(__('footer.power_by_:hustoj', array(':hustoj'=>HTML::anchor('https://github.com/dotkrnl/hustoj', 'HUSTOJ')))); ?></p>
 </div>
 <?php echo View::factory('block/ga');?>
 <?php if (OJ::is_backend()):?>
