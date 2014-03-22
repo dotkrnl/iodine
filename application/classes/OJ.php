@@ -58,6 +58,27 @@ class OJ
         );
 
     /**
+     * @var  array  result code to color code
+     */
+    public static $status_color
+        = array(
+            "4"  => "success",
+            "5"  => "active",
+            "6"  => "warning",
+            "7"  => "danger",
+            "8"  => "danger",
+            "9"  => "danger",
+            "10" => "danger",
+            "11" => "danger",
+            "12" => "info",
+            "13" => "info",
+            "0"  => "info",
+            "1"  => "info",
+            "2"  => "info",
+            "3"  => "info"
+        );
+
+    /**
      * 判断当前用户是否是管理员
      *
      * @return bool

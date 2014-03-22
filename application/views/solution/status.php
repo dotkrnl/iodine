@@ -34,7 +34,7 @@
 <table class="table table-hover">
 	<thead>
 	<tr>
-		<th><?php echo(__('solution.status.problem_id')); ?></th>
+		<th class="pid"><?php echo(__('solution.status.problem_id')); ?></th>
 		<th><?php echo(__('solution.status.user_id')); ?></th>
 		<th><?php echo(__('solution.status.result')); ?></th>
 		<th><?php echo(__('solution.status.time')); ?></th>
@@ -42,6 +42,7 @@
 		<th><?php echo(__('solution.status.language')); ?></th>
 		<th><?php echo(__('solution.status.code_length')); ?></th>
 		<th><?php echo(__('solution.status.submit_time')); ?></th>
+        <th class="colorcol"></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -51,10 +52,10 @@
     <tr <?php if ( $current_user AND $i->allow_view_code($current_user)):?>
         href="<?php e::url("/solution/source/{$i->solution_id}");?>" class="clickable"
     <?php endif;?>>
-        <td href="<?php e::url("/problem/show/{$i->problem_id}"); ?>" class="clickable">
+        <td href="<?php e::url("/problem/show/{$i->problem_id}"); ?>" class="pid">
             <?php echo(HTML::anchor("/problem/show/{$i->problem_id}", $i->problem_id)); ?>
         </td>
-        <td href="<?php e::url("/u/{$i->user_id}"); ?>" class="clickable">
+        <td href="<?php e::url("/u/{$i->user_id}"); ?>">
             <?php echo(HTML::anchor("/u/{$i->user_id}", $i->user_id)); ?>
         </td>
         <td>
@@ -66,6 +67,7 @@
         <td><?php echo e::lang($i->language);?></td>
         <td><?php echo $i->code_length;?>B</td>
         <td><?php echo($i->in_date);?></td>
+        <td class="colorcol <?php echo(e::status_color($i->result)); ?>"></td>
     </tr>
 <?php endif; ?>
 <?php endforeach;?>

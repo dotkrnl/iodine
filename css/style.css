@@ -361,6 +361,10 @@ div.user-stats li.failed{
     width: 7em;
 }
 
+.colorcol {
+    width: 1em;
+}
+
 .submit textarea {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4;

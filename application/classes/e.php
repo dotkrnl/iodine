@@ -321,4 +321,14 @@ class e
         }
         return '';
     }
+
+    public static function status_color($status_code)
+    {
+        return OJ::$status_color[$status_code];
+    }
+
+    public static function contest_info($contest) {
+        return __('contest.header.start') . $contest->start_time . '　' .
+               __('contest.header.end') . $contest->end_time;
+    }
 }
