@@ -349,14 +349,16 @@ div.user-stats li.failed{
     cursor: pointer;
 }
 
-.passed{
-    color: white;
-    background-color: #4cae4c !important;
+.pid {
+    text-align: center;
+    width: 5em;
 }
-
-.trying{
-    color: white;
-    background-color: #eea236 !important;
+.ptitle {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+}
+.pratio {
+    width: 7em;
 }
 
 .submit textarea {

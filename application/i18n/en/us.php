@@ -42,7 +42,7 @@ return array(
     'problem.list.problem_set_:id' => 'Problem Set :id',
     'problem.list.id' => 'ID',
     'problem.list.title' => 'Title',
-    'problem.list.ratio_ac_submit' => 'Ratio(AC/Submit)',
+    'problem.list.ratio_ac_submit' => 'Ratio',
     'problem.searchform.search_text' => 'Search Text',
     'problem.searchform.search' => 'Search',
     'problem.searchform.type' => 'Type',
