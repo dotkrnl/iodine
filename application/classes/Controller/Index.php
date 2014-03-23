@@ -66,22 +66,22 @@ class Controller_Index extends Controller_Base
         //TODO: 3. add total submission status, total, tle, ac, re, etc.
         //TODO: 4. server status, system load, network...
         //TODO:
-        $this->template_data['title'] = 'HUST OJ STATUS';
+        $this->template_data['title'] = 'Status';
     }
 
     public function action_about()
     {
-        $this->template_data['title'] = "About HUST OJ";
+        $this->template_data['title'] = "About";
     }
 
     public function action_links()
     {
-        $this->template_data['title'] = "Friends Link";
+        $this->template_data['title'] = "Links";
     }
 
     public function action_contact()
     {
-        $this->template_data['title'] = "Contact US";
+        $this->template_data['title'] = "Contact";
     }
 
     public function action_help()
@@ -91,7 +91,7 @@ class Controller_Index extends Controller_Base
 
     public function action_terms()
     {
-        $this->template_data['title'] = 'TERMS';
+        $this->template_data['title'] = 'Terms';
     }
 
     public function action_captcha()

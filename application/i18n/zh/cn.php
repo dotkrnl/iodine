@@ -31,7 +31,7 @@ return array(
     'footer.help' => '帮助',
     'footer.terms' => '条约',
     'footer.copyright_:year_:team_reserved' => '版权所有 &copy; :year :team. 保留所有权利',
-    'footer.power_by_:hustoj' => '基于 :hustoj 项目',
+    'footer.power_by_:iodine' => '基于 :iodine 项目',
 
     'pager.newer' => '&larr; 上一页',
     'pager.older' => '下一页 &rarr;',

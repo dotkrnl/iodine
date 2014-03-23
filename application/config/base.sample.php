@@ -6,13 +6,13 @@
  */
 
 return array(
-    'name'                => 'HUSTOJ',
-    'team'                => 'HUST ACMICPC TEAM',
-    'desc'                => '华中科技大学ACM组织',
-    'keyword'             => '华中科技大学, ACM, freefcw, sempr, online judge, 计算机竞赛, 编程, ICPC',
-    'domain'              => 'acm.hust.edu.cn',
-    'base_url'            => '/', // should ends with /, for example '/oj/'
-    'salt'                => 'hustoj',
+    'name'                => 'iodine',
+    'team'                => 'hustoj/iodine',
+    'desc'                => 'yet another online judge',
+    'keyword'             => 'online judge, programming, oi, oj, iodine',
+    'domain'              => 'youriodine.yourdomain.com',
+    'base_url'            => '/path/to/iodine/', // ends with /, for example '/oj/'
+    'salt'                => 'iodine',
     'oi_mode'             => false,
     'captcha_mode'        => false, // false, 'local', 'recaptcha'
     'captcha_public_key'  => 'YOUR-RECAPTCHA-PUBLIC-KEY',

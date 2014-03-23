@@ -118,7 +118,7 @@ I18n::lang('en-us');
 /**
  * set Cookie config
  */
-Cookie::$salt = $config->get('salt', 'hustoj');
+Cookie::$salt = $config->get('salt', 'iodine');
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
