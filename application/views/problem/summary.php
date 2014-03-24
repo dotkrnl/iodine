@@ -12,7 +12,7 @@
 </ul>
 </div>
 <div class="col-sm-9">
-<table class="table table-striped">
+<table class="table table-hover">
 	<thead>
 		<tr>
             <th><?php echo(__('problem.summary.rank')); ?></th>
