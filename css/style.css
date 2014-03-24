@@ -6,7 +6,8 @@
 }
 
 .problem-pagination {
-    max-width: 600px; /* will ok in pagination less than 15, if larger than 15, make li a padding less, or other ui*/
+    max-width: 600px;
+    margin-top: 0;
     float: left;
 }
 
@@ -32,10 +33,6 @@
   .status-filter {
     width: 100%;
   }
-}
-
-.news {
-    margin: 30px 10px;
 }
 
 .table,
@@ -86,7 +83,7 @@ div.contest-info p {
     margin-bottom: 0;
 }
 .welcome, .header {
-    margin-bottom: 22px;
+    margin-bottom: 2.5em;
 }
 
 .welcome, .header {
