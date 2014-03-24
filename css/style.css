@@ -36,8 +36,19 @@
 }
 
 .table,
-.news-content {
+.news-content,
+.news-summary {
     overflow: hidden;
+}
+
+.news-summary {
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    height: 10em;
+    margin-bottom: 2em;
+}
+.news-summary:hover {
+    height: 11em;
 }
 
 div.err-notice {

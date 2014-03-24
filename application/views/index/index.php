@@ -3,12 +3,8 @@
         <?php /* @var Model_News[] $news_list */foreach($news_list as $news):?>
         <div class="col-md-6 news-item">
             <h4><a href="<?php e::url("/news/{$news->news_id}");?>"><?php echo($news->title);?></a><?php if ($news->is_top_news()):?><span class="label label-danger">top</span><?php endif;?></h4>
-            <div class="news-content readability">
-                <?php if ( mb_strlen($news->content) > 150 ):?>
-                <?php echo(mb_substr($news->content, 0, 150));?><a href="<?php e::url("/news/{$news->news_id}");?>" class="readmore">...</a>
-                <?php else:?>
+            <div class="news-summary readability">
                 <?php echo($news->content);?>
-                <?php endif;?>
             </div>
         </div>
         <?php endforeach;?>
