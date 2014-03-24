@@ -3,7 +3,8 @@
 
 class OJ
 {
-    const per_page = 100;
+    const per_page = 30;
+    const problem_per_page = 100;
     /**
      * @var array result code to human language short
      */

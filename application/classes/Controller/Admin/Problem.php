@@ -113,9 +113,9 @@ class Controller_Admin_Problem extends Controller_Admin_Base {
         $orderby = array(
             Model_Problem::$primary_key => Model_Base::ORDER_ASC
         );
-        $problem_list = Model_Problem::find($filter, $page, OJ::per_page, $orderby);
+        $problem_list = Model_Problem::find($filter, $page, OJ::problem_per_page, $orderby);
 
-        $this->template_data['pages'] = ceil(intval(Model_Problem::count($filter)) / OJ::per_page);
+        $this->template_data['pages'] = ceil(intval(Model_Problem::count($filter)) / OJ::problem_per_page);
         $this->template_data['problem_list'] = $problem_list;
         $this->template_data['title'] = __('admin.problem.list.problem_list');
     }

@@ -107,7 +107,7 @@ class Model_Problem extends Model_Base
         $filter = self::default_filter();
 
         $number_of_problems = Model_Problem::count($filter);
-        $total_page = ceil( intval($number_of_problems) / OJ::per_page );
+        $total_page = ceil( intval($number_of_problems) / OJ::problem_per_page );
 
         return $total_page;
     }
@@ -125,7 +125,7 @@ class Model_Problem extends Model_Base
             Model_Problem::$primary_key => Model_Base::ORDER_ASC
         );
         $filter = self::default_filter();
-        return Model_Problem::find($filter, $volume, OJ::per_page, $orderby);
+        return Model_Problem::find($filter, $volume, OJ::problem_per_page, $orderby);
     }
 
     /**
