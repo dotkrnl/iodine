@@ -24,7 +24,7 @@
 		</tr>
     </thead>
 	<tbody>
-		<?php $rank = 0;?>
+		<?php $rank = $start_rank;?>
 		<?php foreach($solutions as $item): ?>
 		<?php $rank = $rank + 1; ?>
         <?php 
@@ -34,7 +34,7 @@
                 'pid' => $item['problem_id'],
             );
         ?>
-        <tr href="<?php e::url('/status'. URL::query($params));?>" class="clickable">
+        <tr href="<?php e::url('/status'. URL::query($params, false));?>" class="clickable">
 			<td><?php print $rank; ?></td>
             <td href="<?php e::url("/u/{$item['user_id']}");?>">
                 <a href="<?php e::url("/u/{$item['user_id']}");?>"><?php echo $item['user_id'];?></a>
@@ -47,5 +47,6 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+<?php echo(View::factory('common/pager', array('base_url' => '/problem/summary/' . $problem_id, 'total' => $total)));?>
 </div>
 </div>
