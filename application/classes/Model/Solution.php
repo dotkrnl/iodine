@@ -228,12 +228,12 @@ class Model_Solution extends Model_Base
     {
         $start = $page * $limit;
 
-        $sql = 'SELECT solution_id, problem_id, count(*) AS att, user_id, language, memory, time, min(10000000000000000000 + time * 100000000000 + memory * 100000 + code_length) AS score, in_date
+        $sql = 'SELECT solution_id, problem_id, count(*) AS att, user_id, language, memory, time, in_date
                 FROM solution
                 WHERE result = :status
                 AND problem_id = :problem_id
                 GROUP BY user_id
-                ORDER BY score, in_date
+                ORDER BY time, memory, code_length, in_date
                 LIMIT :start, :limit';
 
         $query = DB::query(Database::SELECT, $sql)
