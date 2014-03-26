@@ -3,8 +3,9 @@
 <table class="table table-hover">
 <thead>
     <tr>
-        <th><?php echo(__('contest.show.id')); ?></th>
-        <th><?php echo(__('contest.show.title')); ?></th>
+        <th class="pid"><?php echo(__('contest.show.id')); ?></th>
+        <th class="ptitle"><?php echo(__('contest.show.title')); ?></th>
+        <th class="colorcol"></th>
     </tr>
 </thead>
 <tbody>
@@ -13,8 +14,9 @@
     $url = sprintf('/contest/%s/problem/%s', $cid, $p->num);
 ?>
   <tr href="<?php e::url($url);?>" class="clickable">
-        <td><?php echo($p->display_order());?></td>
-        <td><a href="<?php e::url($url);?>"><?php echo($p->title());?></a></td>
+        <td class="pid"><?php echo($p->display_order());?></td>
+        <td class="ptitle"><a href="<?php e::url($url);?>"><?php echo($p->title());?></a></td>
+        <td class="colorcol <?php echo e::pass_status($p->real_problem());?>"></td>
     </tr>
 <?php endforeach;?>
 </tbody>
