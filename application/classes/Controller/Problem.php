@@ -62,7 +62,7 @@ class Controller_Problem extends Controller_Base
 
             $this->template_data['problem'] = $problem;
         } else {
-            throw new Exception_Base(__('common.problem_not_found'));
+            throw new Exception_Page(__('common.problem_not_found'));
         }
     }
 
@@ -86,10 +86,10 @@ class Controller_Problem extends Controller_Base
                     $problem = $contest->problem($cpid);
                     if ( !$problem )
                     {
-                        throw new Exception_Base(__('common.problem_not_found'));
+                        throw new Exception_Page(__('common.problem_not_found'));
                     }
                 } else {
-                    throw new Exception_Base(__('common.contest_not_found'));
+                    throw new Exception_Page(__('common.contest_not_found'));
                 }
             } else {
                 // so is normal submit
@@ -97,7 +97,7 @@ class Controller_Problem extends Controller_Base
 
                 if ( ! $problem OR !$problem->can_user_access($current_user) )
                 {
-                    throw new Exception_Base(__('common.problem_not_found'));
+                    throw new Exception_Page(__('common.problem_not_found'));
                 }
             }
 
@@ -144,7 +144,7 @@ class Controller_Problem extends Controller_Base
         $current_user = $this->get_current_user();
 
         if ( ! $problem OR ! $problem->can_user_access($current_user) )
-            throw new Exception_Base(__('common.problem_not_found'));
+            throw new Exception_Page(__('common.problem_not_found'));
 
         $this->template_data['problem_id'] = $problem_id;
         $this->template_data['start_rank'] = $per_page * ($page - 1);
