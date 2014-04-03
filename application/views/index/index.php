@@ -10,4 +10,4 @@
         <?php endforeach;?>
     </div>
 </div>
-<?php echo(View::factory('common/pager', array('base_url' => '', 'total' => $total)));?>
+<?php echo(View::factory('block/pager', array('base_url' => '', 'total' => $total)));?>
