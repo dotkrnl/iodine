@@ -216,6 +216,7 @@ return array(
     'mail.list.receiver' => '收件人',
     'mail.list.sender' => '发件人',
     'mail.list.time' => '时间',
+    'mail.list.new' => '新!',
     'mail.inbox' => '收件箱',
     'mail.outbox' => '发件箱',
     'mail.new_mail' => '发邮件',
@@ -374,7 +375,7 @@ return array(
     'admin.settings.edit.save_changes' => '保存修改',
     'admin.settings.edit.cancel' => '取消',
 
-    'admin.settings.default.notice' => '这些设置在 base.php 中定义，你可以点击名称将其加入到数据库中。数据库中的设置拥有更高优先级。',
+    'admin.settings.default.notice' => '这些设置在 base.php 中定义，你可以将其加入到数据库中。数据库中的设置拥有更高优先级。',
 
     'common.error' => '糟糕！出错了。',
     'common.user_disabled_title' => '用户被禁用',

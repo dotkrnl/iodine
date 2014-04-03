@@ -216,6 +216,7 @@ return array(
     'mail.list.receiver' => 'Receiver',
     'mail.list.sender' => 'Sender',
     'mail.list.time' => 'Time',
+    'mail.list.new' => 'New!',
     'mail.inbox' => 'Inbox',
     'mail.outbox' => 'Outbox',
     'mail.new_mail' => 'New Mail',
@@ -374,7 +375,7 @@ return array(
     'admin.settings.edit.save_changes' => 'Save Changes',
     'admin.settings.edit.cancel' => 'Cancel',
 
-    'admin.settings.default.notice' => 'These options are in base.php. You can click the name to add into the database. The options in the database have high priority than php file.',
+    'admin.settings.default.notice' => 'These options are in base.php. You can add them into the database. The options in the database have high priority than php file.',
 
     'common.error' => 'Oops! Error.',
     'common.user_disabled_title' => 'User Disabled',
