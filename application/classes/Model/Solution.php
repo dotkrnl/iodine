@@ -10,6 +10,8 @@ class Model_Solution extends Model_Base
     static $table = 'solution';
     static $primary_key = 'solution_id';
 
+    const TEST_RUN_PID           = 0;
+
     const STATUS_PENDING         = 0;
     const STATUS_PENDING_REJUDGE = 1;
     const STATUS_COMPLIE         = 2;
@@ -306,7 +308,8 @@ class Model_Solution extends Model_Base
 //            ->having('result', '!=', self::STATUS_AC);
         $query = DB::select(DB::expr('DISTINCT(problem_id)'))
             ->from(self::$table)
-            ->where('user_id', '=', $user_id);
+            ->where('user_id', '=', $user_id)
+            ->where('problem_id', '!=', self::TEST_RUN_PID);
 
         $plist = $query->execute()->as_array();
         $rlist = array();

@@ -35,10 +35,8 @@
             <div class="panel-heading"><?php echo(__('user.profile.problem_solved')); ?> (<?php echo count($user->problems_resolved());?>)</div>
             <div class="panel-body">
                 <?php foreach ( $user->problems_resolved() as $pid ): ?>
-                <?php if (!OJ::is_test_run($pid)): ?>
                     <a class="btn btn-success" href="<?php e::url("/problem/show/{$pid}");?>"
                        style="font-size: <?php echo(rand(23, 25)); ?>px"><?php echo($pid); ?></a>
-                <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -46,10 +44,8 @@
             <div class="panel-heading"><?php echo(__('user.profile.problem_tried')); ?> (<?php echo count($user->problems_tried());?>)</div>
             <div class="panel-body">
                 <?php foreach ( $user->problems_tried() as $pid ): ?>
-                <?php if (!OJ::is_test_run($pid)): ?>
                     <a class="btn btn-warning" href="<?php e::url("/problem/show/{$pid}");?>"
                        style="font-size: <?php echo(rand(23, 25)); ?>px"><?php echo($pid); ?></a>
-                <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         </div>
