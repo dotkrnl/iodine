@@ -121,8 +121,13 @@ class Controller_Contest extends Controller_Base
                 throw new Exception_Page($error);
             }
         $this->template_data['contest'] = $contest;
-        $this->template_data['title']   = "{$contest['title']}";
-        $this->template_data['subtitle'] = e::contest_info($contest);
+        $this->template_data['title'] = $problem['title'];
+        $this->template_data['subtitle'] =
+            __('problem.show.time_limit') . $problem['time_limit'] . __('problem.show.second') . '　'.
+            __('problem.show.memory_limit') . $problem['memory_limit'] . __('problem.show.MB') . '　'.
+            __('problem.show.submissions_:count', array(':count' => $problem['submit'])) . '　' .
+            __('problem.show.solved_:count', array(':count' => $problem['accepted'])) . '　'.
+            ($problem->is_special_judge() ? __('problem.show.spj') : '');
         $this->template_data['cid']     = $cid;
         $this->template_data['problem'] = $problem;
         $this->template_data['pid']     = $pid;
