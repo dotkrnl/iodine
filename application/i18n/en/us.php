@@ -381,6 +381,7 @@ return array(
     'common.user_disabled_title' => 'User Disabled',
     'common.user_disabled' => 'Your account has been disabled. Please contact administrator.',
     'common.user_forget_password' => 'If you forget your password, please contact administrator.',
+    'common.user_problem' => 'If you have any problem, please contact administrator.',
     'common.contest_not_open' => 'Contest not open',
     'common.contest_private' => 'You cannot access this private contest',
     'common.contest_login_first' => 'Please login first',

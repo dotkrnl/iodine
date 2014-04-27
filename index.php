@@ -109,8 +109,8 @@ if ( $http_code != 200 AND $http_code != 302 )
 {
     if (Kohana::$environment !== Kohana::DEVELOPMENT)
     {
-//        $view = View::factory('error');
-//        $response->body("出错了，请联系 freefcw#gmail");
+        $view = View::factory('error', array('title' => __('common.error')));
+        $response->body($view);
     }
 }
 
