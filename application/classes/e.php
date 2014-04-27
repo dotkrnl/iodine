@@ -308,18 +308,23 @@ class e
         return e::get_base_config('keyword', '');
     }
 
-    public static function pass_status(Model_Problem $problem)
+    public static function pass_status_pid($pid)
     {
         /* @var Model_User $cu */
         $cu = Auth::instance()->get_user();
         if ( $cu )
         {
-            if ( $cu->is_problem_resolved($problem->problem_id))
+            if ( $cu->is_problem_resolved($pid))
                 return 'success';
-            if ( $cu->is_problem_trying($problem->problem_id) )
+            if ( $cu->is_problem_trying($pid) )
                 return 'warning';
         }
-        return '';
+        return 'info';
+    }
+
+    public static function pass_status(Model_Problem $problem)
+    {
+        return e::pass_status_pid($problem->problem_id);
     }
 
     public static function status_color($status_code)
