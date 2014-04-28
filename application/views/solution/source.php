@@ -1,10 +1,10 @@
 <?php /* @var Model_Solution $solution */ ?>
 <div class="row solution">
 <?php if ($cinfo): ?>
-    <pre class="col-sm-12 linenums"><?php echo($cinfo->error); ?></pre>
+    <pre class="col-sm-12 linenums"><?php echo(htmlentities($cinfo->error)); ?></pre>
 <?php endif; ?>
 <?php if ($rinfo): ?>
-    <pre class="col-sm-12 linenums"><?php echo($rinfo->error); ?></pre>
+    <pre class="col-sm-12 linenums"><?php echo(htmlentities($rinfo->error)); ?></pre>
 <?php endif; ?>
 <ul class="list-group solution-info col-sm-2">
     <li class="list-group-item">
