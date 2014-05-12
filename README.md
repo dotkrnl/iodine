@@ -1,6 +1,6 @@
 # iodine
 
-iodine is a HUSTOJ branch for QZYZOJ. Mainly OI training oriented.
+iodine is a HUSTOJ fork for QZYZOJ. Mainly OI training oriented.
 
 ## Contributor
 
