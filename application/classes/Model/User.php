@@ -417,7 +417,7 @@ class Model_User extends Model_Base
         }
         if ( $this->is_admin() OR $this->has_permission(Model_Privilege::PERM_SOURCEVIEW) )
             return true;
-        if ( $solution )
+        if ( OJ::is_show_ac_code_enabled() AND $solution )
         {
             $problem = Model_Problem::find_by_id($solution['problem_id']);
             if (e::pass_status($problem) == 'success')

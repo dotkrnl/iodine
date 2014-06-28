@@ -150,6 +150,11 @@ class OJ
         return Kohana::$config->load('base')->get('captcha_mode', false);
     }
 
+    public static function is_show_ac_code_enabled()
+    {
+        return Kohana::$config->load('base')->get('show_ac_code', false);
+    }
+
     /**
      * test is a test run
      *

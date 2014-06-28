@@ -14,6 +14,7 @@ return array(
     'base_url'            => '/path/to/iodine/', // ends with /, for example '/oj/'
     'salt'                => 'iodine',
     'oi_mode'             => false,
+    'show_ac_code'        => false, // show others' code after AC
     'captcha_mode'        => false, // false, 'local', 'recaptcha'
     'captcha_public_key'  => 'YOUR-RECAPTCHA-PUBLIC-KEY',
     'captcha_private_key' => 'YOUR-RECAPTCHA-PRIVATE-KEY',

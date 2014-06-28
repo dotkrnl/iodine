@@ -18,7 +18,7 @@
 	<tbody>
 <?php /* @var Model_Solution[] $list */?>
 <?php foreach($list as $i): ?>
-<?php if (!OJ::is_test_run($i->problem_id) || ( $current_user AND $i->allow_view_code($current_user))): ?>
+<?php if (!OJ::is_test_run($i->problem_id)): ?>
     <tr <?php if ( $current_user AND $i->allow_view_code($current_user)):?>
         href="<?php e::url("/solution/source/{$i->solution_id}");?>" class="clickable"
     <?php endif;?>>
