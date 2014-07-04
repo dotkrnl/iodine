@@ -21,7 +21,7 @@ return array(
         ),
 
         /* NOTE: The languages.default value must be one of the languages.supported keys. */
-        'default' => 'en',
+        'default' => 'zh',
     ),
 
 );
