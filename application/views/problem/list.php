@@ -24,3 +24,8 @@
 <?php endforeach;?>
 </tbody>
 </table>
+<ul class="pagination problem-pagination">
+<?php for($i = 1; $i <= $pages; $i++): ?>
+    <li<?php if($i == $page):?> class="active"<?php endif;?>><a href="<?php e::url("/problem/list/{$i}");?>"><?php echo($i);?></a></li>
+<?php endfor;?>
+</ul>
