@@ -22,9 +22,15 @@
     <tr <?php if ( $current_user AND $i->allow_view_code($current_user)):?>
         href="<?php e::url("/solution/source/{$i->solution_id}");?>" class="clickable"
     <?php endif;?>>
+        <?php if ( ! Request::$current->query('cid') ):?>
         <td href="<?php e::url("/problem/show/{$i->problem_id}"); ?>" class="pid">
             <?php echo(HTML::anchor("/problem/show/{$i->problem_id}", $i->problem_id)); ?>
         </td>
+        <?php else: ?>
+        <td href="<?php e::url("/contest/{$cid}/problem/{$i->num}"); ?>" class="pid">
+            <?php echo(HTML::anchor("/contest/{$cid}/problem/{$i->num}", e::contest_pid($i->num))); ?>
+        </td>
+        <?php endif; ?>
         <td href="<?php e::url("/u/{$i->user_id}"); ?>">
             <?php echo(HTML::anchor("/u/{$i->user_id}", $i->user_id)); ?>
         </td>

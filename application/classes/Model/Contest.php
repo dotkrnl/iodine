@@ -112,7 +112,8 @@ class Model_Contest extends Model_Base
 
         $data = array();
         $lang = array();
-        for($index = 0; $index < $this->number_of_problems(); $index++ )
+        $count = $this->number_of_problems();
+        for($index = 0; $index < $count; $index++ )
         {
             $data[$index] = array();
             $lang[$index] = array();
@@ -128,8 +129,11 @@ class Model_Contest extends Model_Base
 
         foreach($solutions as $item)
         {
-            $data[$item->num][$item->result]++;
-            $lang[$item->num][$item->language]++;
+            if ($item->num < $count)
+            {
+                $data[$item->num][$item->result]++;
+                $lang[$item->num][$item->language]++;
+            }
         }
 
         foreach( OJ::$result as $key => $display)
