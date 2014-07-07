@@ -16,11 +16,15 @@ class Controller_Admin_Contest extends Controller_Admin_Base
     {
         $this->view = 'admin/contest/list';
         // initial
-        $page_id = $this->get_query('page', 1);
+        $page = $this->get_query('page', 1);
 
-        $contest_list = Model_Contest::find(array(), $page_id);
+        $order_by = array(
+            'contest_id' => Model_Base::ORDER_DESC
+        );
+        $contest_list = Model_Contest::find(array(), $page, OJ::per_page, $order_by);
+        $total = Model_Contest::count();
 
-        $this->template_data['total'] = Model_Contest::count();
+        $this->template_data['total'] = ceil($total / OJ::per_page);
         $this->template_data['contest_list'] = $contest_list;
         $this->template_data['title'] = __('admin.contest.list.contest_list');
     }
