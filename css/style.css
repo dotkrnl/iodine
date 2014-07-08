@@ -41,7 +41,7 @@
 }
 
 .scrollable-container {
-    overflow: scroll;
+    overflow: auto;
 }
 
 .scrollable-container table {

@@ -82,7 +82,7 @@
 
                         $("#edit-problem-list").append('<li class="ui-state-default" data-value="' + pid
                                 + '"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>' + ptitle
-                                + '<a>[x]</a></li>');
+                                + '<a>x</a></li>');
                         resort_problems();
                         bind_delete_event();
                         $('#problem-new').val('');
