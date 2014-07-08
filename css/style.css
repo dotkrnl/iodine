@@ -40,6 +40,14 @@
     overflow: hidden;
 }
 
+.scrollable-container {
+    overflow: scroll;
+}
+
+.scrollable-container table {
+    max-width: none;
+}
+
 .news-summary {
     -webkit-transition: 0.3s all;
     transition: 0.3s all;
@@ -99,7 +107,7 @@ div.contest-info p {
 .welcome, .header {
     background-color: gray;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-size: 100%;
     text-shadow: black 1px 0 5px;
 }
@@ -375,16 +383,6 @@ div.user-stats li.failed{
 .new-topic {
     width: 100%;
     max-width: 800px;
-}
-
-.statics-lang {
-    width: 25%;
-    border-left: silver solid 1px;
-}
-
-.statics-problem{
-    width: 70%;
-    float: left;
 }
 
 #edit-problem-list a{

@@ -2,10 +2,12 @@
 /* @var Model_Contest $contest */
 ?>
 <?php echo(View::factory('contest/header', array('title' => $title, 'cid' => $cid, 'contest' => $contest)));?>
-<table class="table table-striped statics-problem">
+<div class="scrollable-container">
+<table class="table table-striped">
 <thead>
     <tr>
         <th></th><?php foreach( OJ::$result as $rt) echo("<th>{$rt}</th>");?><th>TOTAL</th>
+        <?php foreach( OJ::$language as $lang) echo("<th>{$lang}</th>");?>
     </tr>
 </thead>
 <tbody>
@@ -28,6 +30,11 @@
             ?></td>
     <?php endforeach;?>
         <td><?php echo($total);?></td>
+        <?php foreach(array_keys(OJ::$language) as $result_type):?>
+        <td>
+            <?php if(array_key_exists($result_type, $language[$index])) echo($language[$index][$result_type]);?>
+        </td>
+        <?php endforeach;?>
     </tr>
 <?php endfor;?>
     <tr>
@@ -39,31 +46,10 @@
                 echo($result['total'][$result_type]);?></td>
         <?php endforeach;?>
         <td><?php echo($total);?></td>
+        <?php foreach(array_keys(OJ::$language) as $result_type):?>
+            <td><?php echo($language['total'][$result_type]);?></td>
+        <?php endforeach;?>
     </tr>
     </tbody>
 </table>
-<table class="table table-striped statics-lang">
-<thead>
-    <tr>
-        <?php foreach( OJ::$language as $lang) echo("<th>{$lang}</th>");?>
-    </tr>
-</thead>
-<tbody>
-<?php for($index = 0; $index < $number_of_problem; $index++):
-    ?>
-    <tr>
-<?php if (!array_key_exists($index, $language)) $language[$index] = array();?>
-<?php foreach(array_keys(OJ::$language) as $result_type):?>
-    <td>
-        <?php if(array_key_exists($result_type, $language[$index])) echo($language[$index][$result_type]);?>
-    </td>
-<?php endforeach;?>
-    </tr>
-<?php endfor;?>
-<tr>
-    <?php foreach(array_keys(OJ::$language) as $result_type):?>
-        <td><?php echo($language['total'][$result_type]);?></td>
-    <?php endforeach;?>
-</tr>
-</tbody>
-</table>
+</div>

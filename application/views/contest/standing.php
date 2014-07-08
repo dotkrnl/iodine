@@ -1,6 +1,7 @@
 <?php /* @var Model_Contest $contest */
 ?>
 <?php echo(View::factory('contest/header', array('title' => $title, 'cid' => $cid, 'contest' => $contest)));?>
+<div class="scrollable-container">
 <table class="table table-striped">
 <thead>
     <tr>
@@ -42,3 +43,4 @@
     <?php endforeach;?>
 </tbody>
 </table>
+</div>
