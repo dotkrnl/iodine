@@ -452,3 +452,8 @@ table a, .table a {
     width: 100%;
     margin-bottom: 0.5em;
 }
+
+.badge a {
+    color: white;
+    text-decoration: none;
+}

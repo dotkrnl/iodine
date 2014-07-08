@@ -33,11 +33,11 @@
         <?php echo(__('solution.source.run_id')); ?>
     </li>
     <li class="list-group-item">
-        <span class="badge"><?php echo($solution->problem_id);?></span>
+        <span class="badge"><?php echo(HTML::anchor("/problem/show/{$solution->problem_id}", $solution->problem_id));?></span>
         <?php echo(__('solution.source.problem_id')); ?>
     </li>
     <li class="list-group-item">
-        <span class="badge"><?php echo($solution->user_id);?></span>
+        <span class="badge"><?php echo(HTML::anchor("/u/{$solution->user_id}", $solution->user_id));?></span>
         <?php echo(__('solution.source.user')); ?>
     </li>
     <li class="list-group-item">
