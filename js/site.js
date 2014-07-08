@@ -74,8 +74,8 @@ $(function(){
 });
 
 $(document).ready(function () {
-    $('table tr td').unbind('click');
-    $('table tr td').click(function(){
+    $('table tr td, table tr th').unbind('click');
+    $('table tr td, table tr th').click(function(){
         try {
             if ($(this).attr('href')) { Turbolinks.visit($(this).attr('href')); return false; }
             else if ($(this).parent().attr('href')) { Turbolinks.visit($(this).parent().attr('href')); return false; }

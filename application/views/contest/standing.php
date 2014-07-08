@@ -10,7 +10,9 @@
         <th><?php echo(__('contest.standing.solved')); ?></th>
         <th><?php echo(__('contest.standing.penalty')); ?></th>
         <?php foreach($contest->problem() as $problem): ?>
-        <th><?php echo($problem->display_order());?></th>
+            <th href="<?php e::url("/contest/{$cid}/problem/{$problem->num}"); ?>" class="clickable">
+                <?php echo(HTML::anchor("/contest/{$cid}/problem/{$problem->num}", $problem->display_order())); ?>
+            </th>
         <?php endforeach; ?>
     </tr>
 </thead>
@@ -18,9 +20,11 @@
     <?php $rank = 0; ?>
     <?php foreach($contest->standing() as $team): ?>
     <?php $rank++; ?>
-    <tr>
+    <tr href="<?php echo e::url("/status?cid={$cid}&uid={$team->user_id}"); ?>" class="clickable">
         <td><?php echo($rank);?></td>
-        <td><?php echo($team->user_id);?></td>
+        <td href="<?php e::url("/u/{$team->user_id}"); ?>">
+            <?php echo(HTML::anchor("/u/{$team->user_id}", $team->user_id));?>
+        </td>
         <td><?php echo($team->solved);?></td>
         <td><?php e::the_contest_time($team->time);?></td>
         <?php for($i = 0; $i < $contest->number_of_problems(); $i++): $pdata = $team->problem_status($i)?>
