@@ -26,7 +26,7 @@
             <?php echo(HTML::anchor("/u/{$team->user_id}", $team->user_id));?>
         </td>
         <td><?php echo($team->solved);?></td>
-        <td><?php e::the_contest_time($team->time);?></td>
+        <td><?php e::the_contest_problem_time($team->time);?></td>
         <?php for($i = 0; $i < $contest->number_of_problems(); $i++): $pdata = $team->problem_status($i)?>
         <td class="<?php if ($pdata['accept_at']) echo 'success'; else if ($pdata['wa_count']) echo 'warning';?>">
             <?php if ($pdata['accept_at']): ?>
