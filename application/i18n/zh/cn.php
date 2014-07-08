@@ -104,6 +104,7 @@ return array(
 
     'solution.source.solution_detail' => '评测详情',
     'solution.source.problem_id' => '题号',
+    'solution.source.run_id' => '运行号',
     'solution.source.user' => '用户',
     'solution.source.language' => '语言',
     'solution.source.result' => '结果',

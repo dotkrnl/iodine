@@ -104,6 +104,7 @@ return array(
 
     'solution.source.solution_detail' => 'Solution Details',
     'solution.source.problem_id' => 'Problem',
+    'solution.source.run_id' => 'Run ID',
     'solution.source.user' => 'User',
     'solution.source.language' => 'Language',
     'solution.source.result' => 'Result',

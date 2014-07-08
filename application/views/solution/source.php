@@ -8,6 +8,10 @@
 <?php endif; ?>
 <ul class="list-group solution-info col-sm-2">
     <li class="list-group-item">
+        <span class="badge"><?php echo($solution->solution_id);?></span>
+        <?php echo(__('solution.source.run_id')); ?>
+    </li>
+    <li class="list-group-item">
         <span class="badge"><?php echo($solution->problem_id);?></span>
         <?php echo(__('solution.source.problem_id')); ?>
     </li>
