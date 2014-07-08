@@ -17,6 +17,7 @@ return array(
     'top_frontend.logout' => 'Logout',
     'top_frontend.register' => 'Register',
 
+    'top_backend.back' => 'Back to ',
     'top_backend.dashboard' => 'Dashboard',
     'top_backend.problem' => 'Problem',
     'top_backend.user' => 'User',
@@ -243,7 +244,7 @@ return array(
 
     'admin.problem.sidebar.new' => 'New',
 
-    'admin.problem.list.problem_list' => 'Problem List',
+    'admin.problem.list.problem_list' => 'Problem Admin',
     'admin.problem.list.problem_id' => 'ID',
     'admin.problem.list.title' => 'Title',
     'admin.problem.list.created' => 'Time Created',
@@ -274,7 +275,7 @@ return array(
 
     'admin.user.sidebar.new' => 'New',
 
-    'admin.user.list.user_list' => 'User List',
+    'admin.user.list.user_list' => 'User Admin',
     'admin.user.list.user_id' => 'User ID',
     'admin.user.list.nick' => 'Nick',
     'admin.user.list.solved' => 'Solved',
@@ -310,7 +311,7 @@ return array(
 
     'admin.contest.sidebar.new' => 'New',
 
-    'admin.contest.list.contest_list' => 'Contest List',
+    'admin.contest.list.contest_list' => 'Contest Admin',
     'admin.contest.list.id' => 'ID',
     'admin.contest.list.title' => 'Title',
     'admin.contest.list.status' => 'Status',
@@ -343,7 +344,7 @@ return array(
 
     'admin.news.sidebar.new' => 'New',
 
-    'admin.news.index.news_list' => 'News List',
+    'admin.news.index.news_list' => 'News Admin',
     'admin.news.index.id' => 'ID',
     'admin.news.index.title' => 'Title',
     'admin.news.index.created' => 'Time Created',

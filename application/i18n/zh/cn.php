@@ -17,6 +17,7 @@ return array(
     'top_frontend.logout' => '登出',
     'top_frontend.register' => '注册',
 
+    'top_backend.back' => '返回到',
     'top_backend.dashboard' => '总览',
     'top_backend.problem' => '题目',
     'top_backend.user' => '用户',
@@ -243,7 +244,7 @@ return array(
 
     'admin.problem.sidebar.new' => '创建题目',
 
-    'admin.problem.list.problem_list' => '题目列表',
+    'admin.problem.list.problem_list' => '题目管理',
     'admin.problem.list.problem_id' => '题号',
     'admin.problem.list.title' => '标题',
     'admin.problem.list.created' => '创建时间',
@@ -274,7 +275,7 @@ return array(
 
     'admin.user.sidebar.new' => '创建用户',
 
-    'admin.user.list.user_list' => '用户列表',
+    'admin.user.list.user_list' => '用户管理',
     'admin.user.list.user_id' => '用户名',
     'admin.user.list.nick' => '签名',
     'admin.user.list.solved' => '解决',
@@ -310,7 +311,7 @@ return array(
 
     'admin.contest.sidebar.new' => '创建比赛',
 
-    'admin.contest.list.contest_list' => '比赛列表',
+    'admin.contest.list.contest_list' => '比赛管理',
     'admin.contest.list.id' => '编号',
     'admin.contest.list.title' => '名称',
     'admin.contest.list.status' => '状态',
@@ -343,7 +344,7 @@ return array(
 
     'admin.news.sidebar.new' => '添加新闻',
 
-    'admin.news.index.news_list' => '新闻列表',
+    'admin.news.index.news_list' => '新闻管理',
     'admin.news.index.id' => '编号',
     'admin.news.index.title' => '标题',
     'admin.news.index.created' => '创建时间',

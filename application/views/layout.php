@@ -12,7 +12,11 @@
 <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
+        <?php if ( ! OJ::is_backend()): ?>
             <a class="navbar-brand" href="<?php e::home();?>"><?php echo(e::get_website_name()); ?></a>
+        <?php else: ?>
+            <a class="navbar-brand" href="<?php e::home();?>" target="_blank"><?php echo(__('top_backend.back').e::get_website_name()); ?></a>
+        <?php endif; ?>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>

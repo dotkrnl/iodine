@@ -11,7 +11,7 @@
                 <li><a href="<?php e::url('user/edit');?>"><?php echo(__("top_frontend.useredit")); ?></a></li>
                 <li><a href="<?php e::url('mail');?>"><?php echo(__("top_frontend.mail")); ?></a></li>
                 <?php if ( OJ::is_admin() ): ?>
-                    <li><a href="<?php e::url('admin');?>" data-no-turbolink><?php echo(__("top_frontend.adminctl")); ?></a></li>
+                    <li><a href="<?php e::url('admin');?>" target="_blank" data-no-turbolink><?php echo(__("top_frontend.adminctl")); ?></a></li>
                 <?php endif; ?>
                 <?php if ( $cu ):?>
                     <li class="divider"></li>
