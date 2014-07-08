@@ -400,6 +400,7 @@ div.user-stats li.failed{
 
 .pid {
     text-align: center;
+    min-width: 4em;
     width: 4em;
 }
 .ptitle {
@@ -407,7 +408,30 @@ div.user-stats li.failed{
     padding-right: 1em !important;
 }
 .pratio {
+    min-width: 4em;
     width: 7em;
+}
+
+.urank,
+.usolved,
+.usubmit {
+    text-align: center;
+    min-width: 4em;
+    width: 4em;
+}
+
+.uratio {
+    min-width: 4em;
+    width: 7em;
+}
+
+.unick {
+    width: 600px;
+}
+
+.unick div {
+    word-wrap: break-word;
+    max-width: 600px;
 }
 
 .colorcol {

@@ -6,7 +6,7 @@ class Controller_User extends Controller_Base
     public function action_list()
     {
         // initial
-        $page = $this->request->param('id', 1);
+        $page = $this->request->param('id', $this->get_query('page', 1));
 
         $orderby = array(
             'solved' => Model_Base::ORDER_DESC,

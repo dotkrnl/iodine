@@ -1,12 +1,12 @@
 <table class="table table-hover">
 	<thead>
 	<tr>
-		<th><?php echo(__('user.list.rank')); ?></th>
+		<th class="urank"><?php echo(__('user.list.rank')); ?></th>
 		<th><?php echo(__('user.list.user_id')); ?></th>
-		<th class="hidden-xs hidden-sm"><?php echo(__('user.list.nick')); ?></th>
-		<th><?php echo(__('user.list.solved')); ?></th>
-		<th><?php echo(__('user.list.submit')); ?></th>
-		<th class="hidden-xs hidden-sm"><?php echo(__('user.list.ratio')); ?></th>
+		<th class="unick hidden-xs hidden-sm"><?php echo(__('user.list.nick')); ?></th>
+		<th class="usolved"><?php echo(__('user.list.solved')); ?></th>
+		<th class="usubmit"><?php echo(__('user.list.submit')); ?></th>
+		<th class="uratio hidden-xs hidden-sm"><?php echo(__('user.list.ratio')); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -14,12 +14,12 @@
 <?php foreach($users as $u):?>
 <?php $rank = $rank + 1;?>
     <tr href="<?php e::url("/u/{$u->user_id}"); ?>" class="clickable">
-        <td class="rank"><?php echo($rank) ?></td>
+        <td class="urank"><?php echo($rank) ?></td>
         <td><?php echo HTML::anchor("/u/{$u->user_id}", $u->user_id); ?></td>
-        <td class="hidden-xs hidden-sm"><?php echo HTML::chars($u->nick); ?></td>
-        <td><?php echo($u->solved); ?></td>
-        <td><?php echo($u->submit); ?></td>
-        <td class="hidden-xs hidden-sm"><?php echo($u->ratio_of_accept()) ?></td>
+        <td class="unick hidden-xs hidden-sm"><div><?php echo HTML::chars($u->nick); ?></div></td>
+        <td class="usolved"><?php echo($u->solved); ?></td>
+        <td class="usubmit"><?php echo($u->submit); ?></td>
+        <td class="uratio hidden-xs hidden-sm"><?php echo($u->ratio_of_accept()) ?></td>
     </tr>
 <?php endforeach; ?>
 </tbody>
@@ -32,14 +32,4 @@ function gen_url($page=NULL)
         return sprintf('%s/%s', $base_url, $page);
     return $base_url;
 }?>
-<ul class="pager rank-pager">
-    <?php if ($page != 1): ?>
-        <li class="hidden-xs hidden-sm"><?php echo HTML::anchor(gen_url(), __('user.list.top'));?></li>
-        <li><?php echo HTML::anchor(gen_url($page - 1), __('user.list.prev'));?></li>
-    <?php endif; ?>
-    <li class="hidden-xs hidden-sm reflesh"><?php echo HTML::anchor(gen_url($page), __('user.list.refresh'));?></li>
-    <?php if ($page != $total_page): ?>
-        <li><?php echo HTML::anchor(gen_url($page + 1), __('user.list.next'));?></li>
-        <li class="hidden-xs hidden-sm"><?php echo HTML::anchor(gen_url($total_page), __('user.list.last'));?></li>
-    <?php endif; ?>
-</ul>
+<?php echo(View::factory('block/pager', array('base_url' => '/rank/user', 'total' => $total_page)));?>
