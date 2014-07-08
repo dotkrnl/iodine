@@ -111,6 +111,9 @@ return array(
     'solution.source.time' => 'Time',
     'solution.source.memory' => 'Memory',
     'solution.source.score' => 'Score',
+    'solution.source.show_error' => 'Show Errors',
+    'solution.source.error_info' => 'Errors',
+    'solution.source.error.close' => 'Close',
 
     'user.list.user_rank' => 'User Rank',
     'user.list.rank' => 'Rank',

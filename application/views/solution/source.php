@@ -1,12 +1,33 @@
 <?php /* @var Model_Solution $solution */ ?>
 <div class="row solution">
-<?php if ($cinfo): ?>
-    <pre class="col-sm-12 linenums"><?php echo(htmlentities($cinfo->error)); ?></pre>
+
+<?php if ($cinfo || $rinfo): ?>
+<div class="modal fade" id="error_info" tabindex="-1" role="dialog" aria-labelledby="error_info_label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?php echo(__('solution.source.error.close')); ?></span></button>
+      <h4 class="modal-title" id="error_info_label"><?php echo(__('solution.source.error_info')); ?></h4>
+      </div>
+      <div class="modal-body">
+        <?php if ($cinfo): ?>
+          <pre><?php echo(htmlentities($cinfo->error)); ?></pre>
+        <?php endif; ?>
+        <?php if ($rinfo): ?>
+          <pre><?php echo(htmlentities($rinfo->error)); ?></pre>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</div>
 <?php endif; ?>
-<?php if ($rinfo): ?>
-    <pre class="col-sm-12 linenums"><?php echo(htmlentities($rinfo->error)); ?></pre>
-<?php endif; ?>
+
 <ul class="list-group solution-info col-sm-2">
+    <?php if ($cinfo || $rinfo): ?>
+    <button class="btn btn-primary btn-lg btn-full" data-toggle="modal" data-target="#error_info">
+        <?php echo(__('solution.source.show_error')); ?>
+    </button>
+    <?php endif; ?>
     <li class="list-group-item">
         <span class="badge"><?php echo($solution->solution_id);?></span>
         <?php echo(__('solution.source.run_id')); ?>

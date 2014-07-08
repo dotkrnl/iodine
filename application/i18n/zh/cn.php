@@ -111,6 +111,9 @@ return array(
     'solution.source.time' => '耗时',
     'solution.source.memory' => '内存',
     'solution.source.score' => '得分',
+    'solution.source.show_error' => '显示错误',
+    'solution.source.error_info' => '错误信息',
+    'solution.source.error.close' => '关闭',
 
     'user.list.user_rank' => '用户排名',
     'user.list.rank' => '名次',

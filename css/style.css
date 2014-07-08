@@ -446,3 +446,8 @@ div.user-stats li.failed{
 table a, .table a {
     text-decoration: none;
 }
+
+.btn-full {
+    width: 100%;
+    margin-bottom: 0.5em;
+}
