@@ -2,7 +2,7 @@
 ?>
 <?php echo(View::factory('contest/header', array('title' => $title, 'cid' => $cid, 'contest' => $contest)));?>
 <div class="scrollable-container">
-<table class="table table-striped">
+<table class="table table-hover" id="contest-standing">
 <thead>
     <tr>
         <th><?php echo(__('contest.standing.rank')); ?></th>
@@ -24,19 +24,14 @@
         <td><?php echo($team->solved);?></td>
         <td><?php e::the_contest_time($team->time);?></td>
         <?php for($i = 0; $i < $contest->number_of_problems(); $i++): $pdata = $team->problem_status($i)?>
-        <td>
-            <?php if ($pdata['accept_at']):?>
-                <?php e::the_contest_time($pdata['accept_at']);?>
-                <?php if ($pdata['wa_count']):?>
-                    (-<?php echo($pdata['wa_count']);?>)
-                <?php endif; ?>
-            <?php else:?>
-                <?php if ($pdata['wa_count']):?>
-                    (-<?php echo($pdata['wa_count']);?>)
-                <?php else:?>
-                    -/-
-                <?php endif; ?>
-            <?php endif;?>
+        <td class="<?php if ($pdata['accept_at']) echo 'success'; else if ($pdata['wa_count']) echo 'warning';?>">
+            <?php if ($pdata['accept_at']): ?>
+                <b><?php echo($pdata['wa_count'] + 1);?></b><br />
+                <small><?php e::the_contest_problem_time($pdata['accept_at']);?></small>
+            <?php elseif ($pdata['wa_count']): ?>
+                <b><?php echo($pdata['wa_count']);?></b><br />
+                <small>--</small>
+            <?php endif; ?>
         </td>
         <?php endfor; ?>
     </tr>

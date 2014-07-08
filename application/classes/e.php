@@ -136,6 +136,19 @@ class e
     /**
      * @static
      *
+     * @param $time
+     *
+     * make contest problem time normalize
+     */
+    public static function the_contest_problem_time($time)
+    {
+        $minute   = $time / 60;
+        printf("%d", $minute);
+    }
+
+    /**
+     * @static
+     *
      * @param     $timestamp
      * @param int $granularity
      *
