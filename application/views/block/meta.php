@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="<?php e::url('css/ui-lightness/jquery-ui-1.10.3.custom.min.css');?>">
 <script type="text/javascript" src="<?php e::url('js/jquery-1.9.1.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/bootstrap.min.js');?>"></script>
+<script type="text/javascript" src="<?php e::url('js/respond.js');?>"></script>
+<script type="text/javascript" src="<?php e::url('js/jquery.html5-placeholder-shim.js');?>"></script>
 <?php if ( OJ::is_backend() ):?>
 <script type="text/javascript" src="<?php e::url('js/jquery-ui-1.10.3.custom.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/tinymce/tinymce.min.js');?>"></script>
@@ -21,8 +23,6 @@
 <script type="text/javascript" src="<?php e::url('js/turbolinks.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/jquery.turbolinks.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/nprogress.js');?>"></script>
-<script type="text/javascript" src="<?php e::url('js/respond.js');?>"></script>
-<script type="text/javascript" src="<?php e::url('js/jquery.html5-placeholder-shim.js');?>"></script>
 <?php endif;?>
 <script type="text/javascript" src="<?php e::url('js/jquery.bs.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/site.js');?>"></script>
