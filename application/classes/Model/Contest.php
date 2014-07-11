@@ -129,7 +129,7 @@ class Model_Contest extends Model_Base
 
         foreach($solutions as $item)
         {
-            if ($item->num < $count)
+            if ($item->num < $count && $item->result >= 4 && $item->result <= 11)
             {
                 $data[$item->num][$item->result]++;
                 $lang[$item->num][$item->language]++;
