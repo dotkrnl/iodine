@@ -71,11 +71,16 @@ class Controller_Mail extends Controller_Base
 
             $receiver = Model_User::find_by_id($user_id);
 
+            if ( trim($this->get_post('title')) == '' )
+            {
+                throw new Exception_Page(__('common.title_not_null'));
+            }
+
             if ( $receiver )
             {
-                $title = $this->get_post('title', 'no title');
+                $title = $this->get_post('title');
 
-                $content = $this->get_raw_post('content', 'no content');
+                $content = $this->get_raw_post('content');
 
                 $mail = new Model_Mail;
                 $mail->from_user = $this->current_user->user_id;

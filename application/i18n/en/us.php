@@ -405,6 +405,7 @@ return array(
     'common.submit_before_topic' => 'Submit code for one problem before taking part in discuss',
     'common.rejudge_:problem' => 'Rejudging problem :problem',
     'common.rejudge_:runid' => 'Rejudging solution :runid',
+    'common.title_not_null' => 'Title could not be empty',
 
     'username' => 'Username',
     'nick' => 'Nick',

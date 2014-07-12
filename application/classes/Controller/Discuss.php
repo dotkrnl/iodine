@@ -139,6 +139,11 @@ class Controller_Discuss extends Controller_Base
 
         if ( $this->request->is_post() ) {
 
+            if ( trim($this->get_post('title')) == '' )
+            {
+                throw new Exception_Page(__('common.title_not_null'));
+            }
+
             $topic = new Model_Topic;
             $topic->title = $this->get_post('title');
             $topic->author_id = $cu->user_id;
