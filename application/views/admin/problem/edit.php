@@ -14,7 +14,7 @@
             <label class="control-label col-sm-4" for="time_limit"><?php echo(__('admin.problem.edit.time_limit')); ?></label>
             <div class="col-sm-8">
                 <div class="input-group">
-                    <input type="text" class="form-control" name="time_limit" id="time_limit" value="<?php echo $problem->time_limit;?>"><span class="input-group-addon"><?php echo(__('admin.problem.edit.second')); ?></span>
+                    <input type="text" class="form-control" name="time_limit" id="time_limit" value="<?php if ($problem->time_limit) echo $problem->time_limit; else echo 1;?>"><span class="input-group-addon"><?php echo(__('admin.problem.edit.second')); ?></span>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <label class="control-label col-sm-4" for="memory_limit"><?php echo(__('admin.problem.edit.memory_limit')); ?></label>
             <div class="col-sm-8">
                 <div class="input-group">
-                    <input type="text" class="form-control" name="memory_limit" id="memory_limit" value="<?php echo $problem->memory_limit;?>"><span class="input-group-addon"><?php echo(__('admin.problem.edit.MB')); ?></span>
+                    <input type="text" class="form-control" name="memory_limit" id="memory_limit" value="<?php if ($problem->memory_limit) echo $problem->memory_limit; else echo 256;?>"><span class="input-group-addon"><?php echo(__('admin.problem.edit.MB')); ?></span>
                 </div>
             </div>
         </div>
