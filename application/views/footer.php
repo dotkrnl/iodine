@@ -14,12 +14,16 @@
 <?php if (OJ::is_backend()):?>
 <script type="text/javascript">
     tinymce.init({
-        plugins: "image link code",
+        plugins: "image link code paste",
         selector: ".tinymce",
         menubar: false,
         toolbar: "undo redo | styleselect fontselect | bold italic | bullist numlist | link image | code",
         statusbar: false,
         convert_urls: false,
+        paste_word_valid_elements: "b,strong,i,em,h1,h2,sup,sub",
+        valid_styles: {
+            "*": "width,height",
+        },
 <?php if (I18n::$lang != 'en-us'): ?>
         language: "<?php echo(I18n::$lang); ?>",
 <?php endif; ?>
