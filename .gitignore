@@ -10,8 +10,3 @@ application/config/base.php
 application/config/development/database.php
 application/config/production/database.php
 .htaccess
-
-# user defined
-css/brand.jpg
-css/heading.jpg
-
