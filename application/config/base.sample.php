@@ -15,6 +15,7 @@ return array(
     'salt'                => 'iodine',
     'oi_mode'             => false,
     'show_ac_code'        => false, // show others' code after AC
+    'submit_time'         => 5, // in second
     'captcha_mode'        => false, // false, 'local', 'recaptcha'
     'captcha_public_key'  => 'YOUR-RECAPTCHA-PUBLIC-KEY',
     'captcha_private_key' => 'YOUR-RECAPTCHA-PRIVATE-KEY',

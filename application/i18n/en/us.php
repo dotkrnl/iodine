@@ -406,6 +406,7 @@ return array(
     'common.rejudge_:problem' => 'Rejudging problem :problem',
     'common.rejudge_:runid' => 'Rejudging solution :runid',
     'common.title_not_null' => 'Title could not be empty',
+    'common.too_quick_:sec' => 'Please submit again after :sec seconds',
 
     'username' => 'Username',
     'nick' => 'Nick',
