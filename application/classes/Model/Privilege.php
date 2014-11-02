@@ -80,4 +80,10 @@ class Model_Privilege extends Model_Save
 
     public function validate()
     {}
+
+    public function destroy()
+    {
+        $query = DB::delete(static::$table)->where('user_id', '=', $this->user_id)->and_where('rightstr', '=', $this->rightstr);
+        return $query->execute();
+    }
 }
