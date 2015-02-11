@@ -23,9 +23,15 @@
         href="<?php e::url("/solution/source/{$i->solution_id}");?>" class="clickable"
     <?php endif;?>>
         <?php if ( ! Request::$current->query('cid') ):?>
-        <td href="<?php e::url("/problem/show/{$i->problem_id}"); ?>" class="pid">
-            <?php echo(HTML::anchor("/problem/show/{$i->problem_id}", $i->problem_id)); ?>
-        </td>
+            <?php if ( $i->contest_id ): ?>
+            <td href="<?php e::url("/contest/{$i->contest_id}/problem/{$i->num}"); ?>" class="pid">
+                <?php echo(HTML::anchor("/contest/{$i->contest_id}/problem/{$i->num}", '' . $i->contest_id . e::contest_pid($i->num) )); ?>
+            </td>
+            <?php else: ?>
+            <td href="<?php e::url("/problem/show/{$i->problem_id}"); ?>" class="pid">
+                <?php echo(HTML::anchor("/problem/show/{$i->problem_id}", $i->problem_id)); ?>
+            </td>
+            <?php endif; ?>
         <?php else: ?>
         <td href="<?php e::url("/contest/{$cid}/problem/{$i->num}"); ?>" class="pid">
             <?php echo(HTML::anchor("/contest/{$cid}/problem/{$i->num}", e::contest_pid($i->num))); ?>
