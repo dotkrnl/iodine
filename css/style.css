@@ -56,6 +56,7 @@
 }
 .news-summary:hover {
     height: 11em;
+    margin-bottom: 1em;
 }
 
 div.err-notice {
@@ -456,4 +457,11 @@ table a, .table a {
 .badge a {
     color: white;
     text-decoration: none;
+}
+
+#problem-desc p,
+#problem-input p,
+#problem-output p,
+#problem-hint p {
+  text-indent: 2em;
 }

@@ -6,9 +6,9 @@ if (isset($cid)) {
     <dt><?php echo(__('problem.show.description')); ?></dt>
     <dd id="problem-desc"><?php echo($problem['description']);?></dd>
     <dt><?php echo(__('problem.show.input')); ?></dt>
-    <dd><?php echo($problem['input']);?></dd>
+    <dd id="problem-input"><?php echo($problem['input']);?></dd>
     <dt><?php echo(__('problem.show.output')); ?></dt>
-    <dd><?php echo($problem['output']);?></dd>
+    <dd id="problem-output"><?php echo($problem['output']);?></dd>
     <dt><?php echo(__('problem.show.sample_input')); ?></dt>
     <dd>
         <pre><?php echo(htmlspecialchars($problem['sample_input']));?></pre>
@@ -19,7 +19,7 @@ if (isset($cid)) {
     </dd>
     <?php if (trim($problem['hint']) != ''): ?>
         <dt><?php echo(__('problem.show.hint')); ?></dt>
-        <dd><?php echo($problem['hint']); ?></dd>
+        <dd id="problem-hint"><?php echo($problem['hint']); ?></dd>
     <?php endif; ?>
     <?php if (trim($problem['source']) != ''): ?>
         <dt><?php echo(__('problem.show.source')); ?></dt>
