@@ -19,7 +19,7 @@ $(function(){
             }
         });
     })
-})
+});
 
 $(document).ready(function () {
     $('body').responsive({

@@ -442,9 +442,9 @@ return array(
     'title' => '标题',
     'source' => '来源',
 
-    'Accepted' => '正确答案',
+    'Accepted' => '正确提交',
     'Presentation Error' => '表达错误',
-    'Wrong Answer' => '错误答案',
+    'Wrong Answer' => '答案错误',
     'Time Limit Exceed' => '时间超限',
     'Memory Limit Exceed' => '内存超限',
     'Output Limit Exceed' => '输出超限',

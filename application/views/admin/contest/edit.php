@@ -108,7 +108,7 @@
                                 cache[ term ] = data;
                                 response( data );
                             })
-                        }
+                        };
                         $("#problem-new").autocomplete({
                             minLength:2,
                             source: datasource,
