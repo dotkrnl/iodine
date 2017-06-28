@@ -1,5 +1,5 @@
 <?php if ( Request::$current->query('cid') ):?>
-    <?php echo(View::factory('contest/header', array('title' => $title, 'cid' => Request::$current->query('cid'), 'contest' => $contest)));?>
+    <?php echo(View::factory('contest/header', array('title' => $title, 'cid' => e::xss(Request::$current->query('cid')), 'contest' => $contest)));?>
 <?php endif;?>
 <table class="table table-hover">
 	<thead>
